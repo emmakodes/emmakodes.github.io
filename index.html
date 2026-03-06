@@ -126,6 +126,13 @@
     color: var(--muted);
   }
 
+  .project-card img {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid var(--line);
+    margin-bottom: 1rem;
+  }
+
   .project-card .meta {
     color: #224a87;
     font-weight: 600;
@@ -217,15 +224,10 @@
         <div class="card">
           <div class="card-block">
             <h2>About Me</h2>
-            <div class="row">
-              <div class="col-md-4">
-                <p><img src="./assets/images/my.jpg" class="img-responsive" alt=""></p>
-              </div>
-              <div class="col-md-8">
-                <h3>I engineer production software for AI-heavy products, from backend architecture to end-user interfaces.</h3>
-                <p>I focus on robust APIs, scalable data systems, and practical AI workflows that solve real operational problems.</p>
-                <p class="cta-line">Core focus: reliable backend and AI systems.</p>
-              </div>
+            <div>
+              <h3>I engineer production software for AI-heavy products, from backend architecture to end-user interfaces.</h3>
+              <p>I focus on robust APIs, scalable data systems, and practical AI workflows that solve real operational problems.</p>
+              <p class="cta-line">Core focus: reliable backend and AI systems.</p>
             </div>
           </div>
         </div>
@@ -276,6 +278,16 @@
               <p>Its wow factor is that it turns agent ideas into reliable systems with orchestration, event-driven execution, human-in-the-loop control, and deployable runtime patterns.</p>
               <p><strong>Stack:</strong> Python, FastAPI, Ray runtime, LiteLLM, RAG integrations, Next.js and Streamlit interfaces.</p>
               <p><a href="https://github.com/supercog-ai/agentic" target="_blank">View repository</a></p>
+            </div>
+
+            <div class="project-card">
+              <h3>AI Support Workflow Automation</h3>
+              <p class="meta">Agentic workflow for intelligent Gmail support operations</p>
+              <img src="./Screenshot 2025-10-01 at 17.50.36.png" alt="AI support workflow automation diagram">
+              <p>This workflow monitors incoming Gmail messages, classifies intent, and routes support emails into an AI agent path.</p>
+              <p>On the support path, an agent uses memory, OpenAI chat models, and Pinecone vector retrieval to generate context-aware responses, then labels emails and creates drafts automatically.</p>
+              <p>In parallel, a Google Drive ingestion flow downloads files, chunks them, embeds them, and updates Pinecone so the agent always answers from fresh knowledge.</p>
+              <p><strong>Stack:</strong> OpenAI chat + embeddings, Pinecone vector store, Gmail/Google Drive integrations, text splitting, automated workflow orchestration.</p>
             </div>
           </div>
         </div>
