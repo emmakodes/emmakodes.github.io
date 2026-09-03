@@ -8,18 +8,18 @@
   <meta name="google" content="notranslate" />
 
   <title>AI Automation Workflows for Venture Capital | Emmanuel Onwuegbusi</title>
-  <meta name="description" content="AI agents and AI automation workflows built to solve real operational problems for venture capital firms - starting with an AI-powered pitch deck triage agent. Watch it work, download the workflow, see the results.">
+  <meta name="description" content="AI agents and AI automation workflows built to solve real operational problems for venture capital firms, starting with an AI-powered pitch deck triage agent. Watch it work, download the workflow, see the results.">
   <link rel="canonical" href="https://emmakodes.github.io/vc-agents/">
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="AI Automation Workflows for Venture Capital">
-  <meta property="og:description" content="AI agents and AI automation workflows built to solve real operational problems for venture capital firms - starting with an AI-powered pitch deck triage agent.">
+  <meta property="og:description" content="AI agents and AI automation workflows built to solve real operational problems for venture capital firms, starting with an AI-powered pitch deck triage agent.">
   <meta property="og:url" content="https://emmakodes.github.io/vc-agents/">
   <meta property="og:image" content="https://emmakodes.github.io/assets/images/my.jpg">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="AI Automation Workflows for Venture Capital">
-  <meta name="twitter:description" content="AI agents and AI automation workflows built to solve real operational problems for venture capital firms - starting with an AI-powered pitch deck triage agent.">
+  <meta name="twitter:description" content="AI agents and AI automation workflows built to solve real operational problems for venture capital firms, starting with an AI-powered pitch deck triage agent.">
   <meta name="twitter:image" content="https://emmakodes.github.io/assets/images/my.jpg">
 
   <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-icon-180x180.png">
@@ -95,6 +95,24 @@
       color: rgba(255, 255, 255, 0.85);
       font-size: 1.3rem;
       text-decoration: underline;
+    }
+
+    .back-link:hover,
+    .back-link:focus {
+      color: #fff;
+    }
+
+    .footer-container p {
+      color: var(--muted);
+    }
+
+    .footer-container .back-link {
+      color: var(--accent);
+    }
+
+    .footer-container .back-link:hover,
+    .footer-container .back-link:focus {
+      color: #6c2609;
     }
 
     .card {
@@ -220,7 +238,7 @@
       <div class="text-center">
         <p class="hero-kicker">Emmanuel Onwuegbusi</p>
         <h1>AI Automation Workflows for Venture Capital</h1>
-        <p class="lead">Real automations I've built to solve problems VCs actually have - starting with an agent
+        <p class="lead">Real automations I've built to solve problems VCs actually have, starting with an agent
           that reads inbound pitch decks, triages them against an investment thesis, and makes sure no founder
           gets left hanging.</p>
         <a class="back-link" href="../">&larr; Back to full portfolio</a>
@@ -234,10 +252,9 @@
           <div class="card intro-card">
             <div class="card-block">
               <h2>What's here</h2>
-              <p>Everything below is a real, working automation - not a mockup. I built and tested each one
-                end-to-end against real triggers and real integrations, and I'm showing you exactly what it
-                produced: a screenshot, a short walkthrough, and the workflow itself as a file you can download and
-                inspect.</p>
+              <p>Everything below is a real, working automation, not a mockup. I built and tested each one end to
+                end against real triggers and real integrations, and I'm showing you exactly what it produced: a
+                screenshot, a short walkthrough, and the workflow itself as a file you can download and inspect.</p>
             </div>
           </div>
 
@@ -251,17 +268,17 @@
 
                 <img src="./deck-triage-agent-screenshot.png"
                   alt="Deck Triage Agent n8n workflow canvas showing the full automation path"
-                  onerror="this.onerror=null;this.outerHTML='&lt;div class=&quot;screenshot-placeholder&quot;&gt;Workflow canvas screenshot coming soon - see deck-triage-agent-screenshot.png&lt;/div&gt;';">
+                  onerror="this.onerror=null;this.outerHTML='&lt;div class=&quot;screenshot-placeholder&quot;&gt;Workflow canvas screenshot coming soon (see deck-triage-agent-screenshot.png)&lt;/div&gt;';">
 
                 <p>VCs lose good deals the same boring way every time: decks pile up in an inbox and either sit
                   unread or get skimmed inconsistently between partners. This agent watches the deals inbox,
                   pulls the full text out of every incoming deck (it correctly picks the actual deck out of an
                   email even when it isn't the first attachment), and scores it FIT, MAYBE, or REJECT against a
-                  real investment thesis - stage, check size, target sectors, hard disqualifiers, and whether
+                  real investment thesis: stage, check size, target sectors, hard disqualifiers, and whether
                   there's an actual traction or team signal.</p>
                 <p>Every decision gets logged with the full reasoning behind it, posted to Slack for the team
                   (REJECTs stay quiet, so nobody's pinged over the obvious no's), and every founder gets an honest,
-                  non-committal reply - nobody who emails in ever just hears nothing back. It's also built not to
+                  non-committal reply, so nobody who emails in ever just hears nothing back. It's also built not to
                   make things up: the model only reasons from the deck text it's actually given, anything too short
                   or corrupted gets routed to a person instead of guessed at, and there's a guard against a deck
                   trying to talk the model into approving itself.</p>
