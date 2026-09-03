@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <meta name="google" content="notranslate" />
+
+  <title>AI Automation Workflows for Venture Capital | Emmanuel Onwuegbusi</title>
+  <meta name="description" content="AI agents and AI automation workflows built to solve real operational problems for venture capital firms - starting with an AI-powered pitch deck triage agent. Watch it work, download the workflow, see the results.">
+  <link rel="canonical" href="https://emmakodes.github.io/vc-agents/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AI Automation Workflows for Venture Capital">
+  <meta property="og:description" content="AI agents and AI automation workflows built to solve real operational problems for venture capital firms - starting with an AI-powered pitch deck triage agent.">
+  <meta property="og:url" content="https://emmakodes.github.io/vc-agents/">
+  <meta property="og:image" content="https://emmakodes.github.io/assets/images/my.jpg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI Automation Workflows for Venture Capital">
+  <meta name="twitter:description" content="AI agents and AI automation workflows built to solve real operational problems for venture capital firms - starting with an AI-powered pitch deck triage agent.">
+  <meta name="twitter:image" content="https://emmakodes.github.io/assets/images/my.jpg">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-icon-180x180.png">
+  <link href="../assets/favicon.ico" rel="icon">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&amp;family=Work+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <link href="../main.d8e0d294.css" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #faf8f4;
+      --ink: #211d18;
+      --muted: #6b6255;
+      --card: #ffffff;
+      --line: #e4ddd0;
+      --accent: #9a3412;
+    }
+
+    body {
+      font-family: "Work Sans", sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+    }
+
+    h1, h2, h3, h4 {
+      font-family: "Newsreader", serif;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+    }
+
+    .background-color-layer {
+      background: var(--ink);
+      opacity: 1;
+    }
+
+    .content-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .hero-kicker {
+      display: inline-block;
+      border: 1px solid rgba(255, 255, 255, 0.32);
+      border-radius: 3px;
+      padding: 0.35rem 0.9rem;
+      font-weight: 600;
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+      font-family: "Work Sans", sans-serif;
+    }
+
+    .white-text-container p.lead {
+      margin: 1rem auto 0;
+      max-width: 760px;
+      color: rgba(255, 255, 255, 0.95);
+      font-size: 2rem;
+      line-height: 1.45;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 1.2rem;
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 1.3rem;
+      text-decoration: underline;
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      background: var(--card);
+      border-radius: 6px;
+    }
+
+    .card h2 {
+      font-size: 2.4rem;
+      margin-bottom: 1rem;
+    }
+
+    .intro-card p {
+      color: var(--muted);
+      font-size: 1.45rem;
+      line-height: 1.6;
+    }
+
+    .project-card {
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 1.7rem;
+      margin-bottom: 1.6rem;
+      background: var(--card);
+    }
+
+    .project-card h3 {
+      margin-top: 0;
+      font-size: 2.15rem;
+    }
+
+    .project-card p {
+      color: var(--muted);
+    }
+
+    .project-card img,
+    .screenshot-placeholder {
+      width: 100%;
+      border-radius: 4px;
+      border: 1px solid var(--line);
+      margin-bottom: 1rem;
+    }
+
+    .screenshot-placeholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      min-height: 220px;
+      background: var(--bg);
+      color: var(--muted);
+      font-size: 1.3rem;
+      padding: 1rem;
+    }
+
+    .project-card .meta {
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 0.8rem;
+    }
+
+    .disclaimer {
+      font-size: 1.2rem;
+      color: var(--muted);
+      font-style: italic;
+      margin: 0.8rem 0 1.1rem;
+    }
+
+    .workflow-links a {
+      display: inline-block;
+      margin: 0 0.6rem 0.6rem 0;
+      padding: 0.55rem 1rem;
+      border-radius: 3px;
+      border: 1px solid var(--line);
+      background: var(--card);
+      font-weight: 600;
+      font-size: 1.3rem;
+      text-decoration: none;
+    }
+
+    .workflow-links a.primary {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+    }
+
+    .stack-line {
+      font-size: 1.3rem;
+    }
+
+    a {
+      color: var(--accent);
+    }
+
+    a:hover,
+    a:focus {
+      color: #6c2609;
+    }
+
+    .cta-line {
+      font-size: 1.7rem;
+      font-weight: 600;
+    }
+
+    .footer-container img {
+      opacity: 0.7;
+    }
+
+    @media (max-width: 767px) {
+      .white-text-container p.lead {
+        font-size: 1.65rem;
+      }
+    }
+  </style>
+</head>
+
+<body class="">
+
+  <div class="background-color-layer"></div>
+  <main class="content-wrapper">
+    <header class="white-text-container section-container">
+      <div class="text-center">
+        <p class="hero-kicker">Emmanuel Onwuegbusi</p>
+        <h1>AI Automation Workflows for Venture Capital</h1>
+        <p class="lead">Real AI agents and AI automation workflows built to solve operational problems venture capital
+          firms actually have - starting with a pitch deck triage agent that reads inbound decks, triages them
+          against an investment thesis, and never lets a founder go without a reply.</p>
+        <a class="back-link" href="../">&larr; Back to full portfolio</a>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+
+          <div class="card intro-card">
+            <div class="card-block">
+              <h2>What's here</h2>
+              <p>Each entry below is a working AI automation workflow - not a mockup. Every one is built, tested
+                end-to-end against real triggers and real integrations, and shown with the actual output it
+                produced: a screenshot of the workflow, a short walkthrough video, and the workflow itself as a
+                downloadable file you can inspect or run yourself.</p>
+              <p>More workflows get added here over time.</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-block">
+              <h2>Workflows</h2>
+
+              <div class="project-card">
+                <h3>Deck Triage Agent</h3>
+                <p class="meta">AI agent that triages inbound VC pitch decks against an investment thesis</p>
+
+                <img src="./deck-triage-agent-screenshot.png"
+                  alt="Deck Triage Agent n8n workflow canvas showing the full automation path"
+                  onerror="this.onerror=null;this.outerHTML='&lt;div class=&quot;screenshot-placeholder&quot;&gt;Workflow canvas screenshot coming soon - see deck-triage-agent-screenshot.png&lt;/div&gt;';">
+
+                <p>VCs lose good deals and burn founder goodwill the same way: pitch decks pile up in an inbox and
+                  either sit unread or get skimmed inconsistently. This agent watches a deals inbox, extracts the
+                  full text of every incoming deck (handling multi-attachment emails correctly - it picks the actual
+                  deck, not just whatever file happened to be first), and runs it through an AI agent that scores it
+                  FIT / MAYBE / REJECT against a concrete investment thesis: stage, check size, target sectors, hard
+                  disqualifiers, and a real traction/team bar.</p>
+                <p>Every decision is logged to Postgres with full reasoning, posted to Slack for the team (with
+                  REJECTs correctly kept quiet), and every founder gets an honest, non-committal reply - so nobody
+                  ever emails a fund and hears nothing back. Built with explicit anti-hallucination guardrails: the
+                  model only ever reasons from the deck text actually given to it, low-text/corrupted decks are
+                  routed to a human instead of guessed at, and a prompt-injection guard stops a deck from talking the
+                  model into approving itself.</p>
+
+                <p class="disclaimer">Demoed against "SaanVC," a fictitious early-stage fund I invented to give the
+                  agent a concrete, realistic investment thesis to work against - not a real client engagement.</p>
+
+                <p class="stack-line"><strong>Stack:</strong> n8n, Gmail API, OpenAI (GPT-4o-mini), PostgreSQL, Slack
+                  API, LangChain structured output parsing.</p>
+
+                <div class="workflow-links">
+                  <a class="primary" href="LOOM_VIDEO_URL_PLACEHOLDER" target="_blank">&#9654; Watch the walkthrough</a>
+                  <a href="./downloads/deck-triage-agent.json" download>&#8595; Download workflow (JSON)</a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </main>
+  <footer class="footer-container white-text-container text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <p><img src="../assets/images/mashup-icon.svg" alt=""></p>
+          <p><a class="back-link" href="../">&larr; Back to full portfolio</a></p>
+          <p>© Emmanuel Onwuegbusi. Built to showcase reliable backend and production AI engineering.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function (event) {
+      if (typeof scrollRevelation === "function") {
+        scrollRevelation('.card');
+      }
+    });
+  </script>
+  <script type="text/javascript" src="../main.bc58148c.js"></script>
+</body>
+
+</html>

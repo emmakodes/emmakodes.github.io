@@ -18,40 +18,36 @@
   <title>Emmanuel Onwuegbusi</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&amp;family=Work+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
 <link href="./main.d8e0d294.css" rel="stylesheet">
 <style>
   :root {
-    --bg: #f4f7fb;
-    --ink: #0c1627;
-    --muted: #44526a;
-    --card: rgba(255, 255, 255, 0.82);
-    --line: #cfdaea;
-    --accent: #0f68f7;
-    --accent-2: #00a89d;
+    --bg: #faf8f4;
+    --ink: #211d18;
+    --muted: #6b6255;
+    --card: #ffffff;
+    --line: #e4ddd0;
+    --accent: #9a3412;
   }
 
   body {
-    font-family: "IBM Plex Sans", sans-serif;
+    font-family: "Work Sans", sans-serif;
     color: var(--ink);
-    background:
-      radial-gradient(circle at 0 0, rgba(15, 104, 247, 0.16), transparent 45%),
-      radial-gradient(circle at 100% 0, rgba(0, 168, 157, 0.14), transparent 35%),
-      var(--bg);
+    background: var(--bg);
   }
 
   h1,
   h2,
   h3,
   h4 {
-    font-family: "Space Grotesk", sans-serif;
-    letter-spacing: -0.02em;
+    font-family: "Newsreader", serif;
+    font-weight: 500;
+    letter-spacing: -0.01em;
   }
 
   .background-color-layer {
-    background: linear-gradient(130deg, #07152f 0%, #0f3468 55%, #0c5f58 100%);
-    opacity: 0.9;
-    box-shadow: inset 0 -42px 72px 8px rgba(12, 95, 88, 0.62);
+    background: var(--ink);
+    opacity: 1;
   }
 
   .content-wrapper {
@@ -70,11 +66,12 @@
   .hero-kicker {
     display: inline-block;
     border: 1px solid rgba(255, 255, 255, 0.32);
-    border-radius: 999px;
+    border-radius: 3px;
     padding: 0.35rem 0.9rem;
     font-weight: 600;
     font-size: 1.25rem;
     margin-bottom: 1rem;
+    font-family: "Work Sans", sans-serif;
   }
 
   .white-text-container p.lead {
@@ -88,9 +85,7 @@
   .card {
     border: 1px solid var(--line);
     background: var(--card);
-    backdrop-filter: blur(8px);
-    border-radius: 18px;
-    box-shadow: 0 14px 34px rgba(15, 38, 78, 0.08);
+    border-radius: 6px;
   }
 
   .card h2 {
@@ -102,19 +97,19 @@
     display: inline-block;
     margin: 0.4rem 0.35rem 0 0;
     padding: 0.42rem 0.8rem;
-    border-radius: 999px;
+    border-radius: 3px;
     border: 1px solid var(--line);
-    background: #f8fbff;
+    background: var(--bg);
     font-size: 1.35rem;
     color: var(--muted);
   }
 
   .project-card {
     border: 1px solid var(--line);
-    border-radius: 14px;
+    border-radius: 6px;
     padding: 1.7rem;
     margin-bottom: 1.6rem;
-    background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
+    background: var(--card);
   }
 
   .project-card h3 {
@@ -128,19 +123,19 @@
 
   .project-card img {
     width: 100%;
-    border-radius: 10px;
+    border-radius: 4px;
     border: 1px solid var(--line);
     margin-bottom: 1rem;
   }
 
   .project-card .meta {
-    color: #224a87;
+    color: var(--accent);
     font-weight: 600;
     margin-bottom: 0.8rem;
   }
 
   .meta {
-    color: #224a87;
+    color: var(--accent);
     font-weight: 600;
     margin-bottom: 0.8rem;
   }
@@ -151,7 +146,7 @@
 
   a:hover,
   a:focus {
-    color: #0851ca;
+    color: #6c2609;
   }
 
   .cta-line {
@@ -163,7 +158,20 @@
     display: inline-block;
     margin-left: 0.55rem;
     border: 1px solid rgba(255, 255, 255, 0.4);
-    border-radius: 8px;
+    border-radius: 3px;
+    padding: 0.25rem 0.55rem;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+    vertical-align: middle;
+  }
+
+  .vc-link {
+    display: inline-block;
+    margin-right: 0.7rem;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 3px;
     padding: 0.25rem 0.55rem;
     color: #fff;
     font-size: 1.2rem;
@@ -195,10 +203,12 @@
       <p class="hero-kicker">Emmanuel Onwuegbusi</p>
       <h1>Software Engineer with experience building production AI systems.</h1>
       <p class="lead">I build reliable software across backend systems and AI-powered products.</p>
-      <p>
-        <a class="fa-icon fa-icon-2x" target="_blank" href="https://github.com/emmakodes/" title="">
-          <i class="fa fa-github" aria-hidden="true"></i>
-        </a>
+      <nav>
+        <p>
+          <a class="vc-link" href="./vc-agents/">AI Automation Workflows for VCs</a>
+          <a class="fa-icon fa-icon-2x" target="_blank" href="https://github.com/emmakodes/" title="">
+            <i class="fa fa-github" aria-hidden="true"></i>
+          </a>
         <a class="devto-link" target="_blank" href="https://dev.to/emmakodes_" title="Dev.to profile">dev.to</a>
         <a class="fa-icon fa-icon-2x" target="_blank" href="https://www.linkedin.com/in/emmanuelonwuegbusi/" title="">
           <i class="fa fa-linkedin"></i>
@@ -209,7 +219,8 @@
         <a class="fa-icon fa-icon-2x" target="_blank" href="https://medium.com/@emmakodes" title="">
           <i class="fa fa-medium"></i>
         </a>
-      </p>
+        </p>
+      </nav>
     </div>
   </header>
 
