@@ -54,6 +54,7 @@
     .background-color-layer {
       background: var(--ink);
       opacity: 1;
+      box-shadow: none;
     }
 
     .content-wrapper {
@@ -219,9 +220,9 @@
       <div class="text-center">
         <p class="hero-kicker">Emmanuel Onwuegbusi</p>
         <h1>AI Automation Workflows for Venture Capital</h1>
-        <p class="lead">Real AI agents and AI automation workflows built to solve operational problems venture capital
-          firms actually have - starting with a pitch deck triage agent that reads inbound decks, triages them
-          against an investment thesis, and never lets a founder go without a reply.</p>
+        <p class="lead">Real automations I've built to solve problems VCs actually have - starting with an agent
+          that reads inbound pitch decks, triages them against an investment thesis, and makes sure no founder
+          gets left hanging.</p>
         <a class="back-link" href="../">&larr; Back to full portfolio</a>
       </div>
     </header>
@@ -233,11 +234,10 @@
           <div class="card intro-card">
             <div class="card-block">
               <h2>What's here</h2>
-              <p>Each entry below is a working AI automation workflow - not a mockup. Every one is built, tested
-                end-to-end against real triggers and real integrations, and shown with the actual output it
-                produced: a screenshot of the workflow, a short walkthrough video, and the workflow itself as a
-                downloadable file you can inspect or run yourself.</p>
-              <p>More workflows get added here over time.</p>
+              <p>Everything below is a real, working automation - not a mockup. I built and tested each one
+                end-to-end against real triggers and real integrations, and I'm showing you exactly what it
+                produced: a screenshot, a short walkthrough, and the workflow itself as a file you can download and
+                inspect.</p>
             </div>
           </div>
 
@@ -253,21 +253,18 @@
                   alt="Deck Triage Agent n8n workflow canvas showing the full automation path"
                   onerror="this.onerror=null;this.outerHTML='&lt;div class=&quot;screenshot-placeholder&quot;&gt;Workflow canvas screenshot coming soon - see deck-triage-agent-screenshot.png&lt;/div&gt;';">
 
-                <p>VCs lose good deals and burn founder goodwill the same way: pitch decks pile up in an inbox and
-                  either sit unread or get skimmed inconsistently. This agent watches a deals inbox, extracts the
-                  full text of every incoming deck (handling multi-attachment emails correctly - it picks the actual
-                  deck, not just whatever file happened to be first), and runs it through an AI agent that scores it
-                  FIT / MAYBE / REJECT against a concrete investment thesis: stage, check size, target sectors, hard
-                  disqualifiers, and a real traction/team bar.</p>
-                <p>Every decision is logged to Postgres with full reasoning, posted to Slack for the team (with
-                  REJECTs correctly kept quiet), and every founder gets an honest, non-committal reply - so nobody
-                  ever emails a fund and hears nothing back. Built with explicit anti-hallucination guardrails: the
-                  model only ever reasons from the deck text actually given to it, low-text/corrupted decks are
-                  routed to a human instead of guessed at, and a prompt-injection guard stops a deck from talking the
-                  model into approving itself.</p>
-
-                <p class="disclaimer">Demoed against "SaanVC," a fictitious early-stage fund I invented to give the
-                  agent a concrete, realistic investment thesis to work against - not a real client engagement.</p>
+                <p>VCs lose good deals the same boring way every time: decks pile up in an inbox and either sit
+                  unread or get skimmed inconsistently between partners. This agent watches the deals inbox,
+                  pulls the full text out of every incoming deck (it correctly picks the actual deck out of an
+                  email even when it isn't the first attachment), and scores it FIT, MAYBE, or REJECT against a
+                  real investment thesis - stage, check size, target sectors, hard disqualifiers, and whether
+                  there's an actual traction or team signal.</p>
+                <p>Every decision gets logged with the full reasoning behind it, posted to Slack for the team
+                  (REJECTs stay quiet, so nobody's pinged over the obvious no's), and every founder gets an honest,
+                  non-committal reply - nobody who emails in ever just hears nothing back. It's also built not to
+                  make things up: the model only reasons from the deck text it's actually given, anything too short
+                  or corrupted gets routed to a person instead of guessed at, and there's a guard against a deck
+                  trying to talk the model into approving itself.</p>
 
                 <p class="stack-line"><strong>Stack:</strong> n8n, Gmail API, OpenAI (GPT-4o-mini), PostgreSQL, Slack
                   API, LangChain structured output parsing.</p>
